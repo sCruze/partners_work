@@ -64,7 +64,7 @@ export default {
   margin: 24px 0 21px 0;
   justify-content: space-between;
   .expand {
-    font-family: "Inter";
+    font-family: "Inter-Light";
     font-style: normal;
     font-weight: 300;
     font-size: 12px;
@@ -81,7 +81,7 @@ export default {
     }
 
     .textBold {
-      font-family: "Inter";
+      font-family: "Inter-Light";
       font-style: normal;
       font-weight: 300;
       font-size: 14px;
@@ -91,7 +91,7 @@ export default {
     p {
       margin-right: 25px;
       cursor: pointer;
-      font-family: "Inter";
+      font-family: "Inter-Light";
       font-style: normal;
       font-weight: 300;
       font-size: 14px;

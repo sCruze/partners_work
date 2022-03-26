@@ -33,7 +33,7 @@ export default {
     flex-basis: 25%;
     width: 100%;
     padding: 24px 0 23.5px 24px;
-    font-family: "Inter";
+    font-family: "Inter-Regular";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;

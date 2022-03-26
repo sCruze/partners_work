@@ -1,10 +1,10 @@
 <template>
-  <div class="status-partner" :class="data">
+  <div class="status-partner" :class="dataStatus">
     <span>
-      <p>{{ data === "active" ? "Активен" : "Заблокирован" }}</p>
+      <p>{{ dataStatus === "active" ? "Активен" : "Заблокирован" }}</p>
     </span>
     <img
-      :src="data === 'active' ? imgLock : imgUnlock"
+      :src="dataStatus === 'active' ? imgLock : imgUnlock"
       @click="blockAndUnblock"
     />
   </div>
@@ -17,7 +17,7 @@ import lock from "../assets/icons/Заблокировать.svg";
 
 export default {
   name: "StatusPartner",
-  props: ["data", "idPartner"],
+  props: ["dataStatus", "idPartner"],
   data: () => ({
     imgLock: lock,
     imgUnlock: unlock,
@@ -25,9 +25,9 @@ export default {
   methods: {
     ...mapActions(["blockPartner", "unblockPartner"]),
     blockAndUnblock() {
-      if (this.data === "activate") {
+      if (this.dataStatus === "activate") {
         this.blockPartner(this.idPartner);
-      } else {
+      } else if (this.dataStatus !== "activate") {
         this.unblockPartner(this.idPartner);
       }
     },
@@ -60,7 +60,7 @@ export default {
       padding: 17.5px 3px;
       @include displayFlex();
       @include flexContentCenter();
-      font-family: "Inter";
+      font-family: "Inter-Light";
       font-style: normal;
       font-weight: 400;
       font-size: 12px;

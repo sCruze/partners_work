@@ -2,18 +2,21 @@
   <div class="partners-content-table">
     <ul
       class="table-row"
-      v-for="data in dataPartners.slice(points.start, points.end)"
-      :key="data.external_id"
+      v-for="partner in dataPartners.slice(points.start, points.end)"
+      :key="partner.external_id"
     >
       <p class="row">
-        {{ new Date(Date.parse(data.created)).toLocaleDateString() }}
+        {{ new Date(Date.parse(partner.created)).toLocaleDateString() }}
       </p>
-      <p class="row">{{ data.name }}</p>
-      <p class="row">{{ data.company.name }}</p>
-      <p class="row">{{ data.phone }}</p>
-      <p class="row">{{ data.email }}</p>
+      <p class="row">{{ partner.name }}</p>
+      <p class="row">{{ partner.company.name }}</p>
+      <p class="row">{{ partner.phone }}</p>
+      <p class="row">{{ partner.email }}</p>
       <p class="row">
-        <StatusPartner :data="data.status" :idPartner="data.external_id" />
+        <StatusPartner
+          :dataStatus="partner.status"
+          :idPartner="partner.external_id"
+        />
       </p>
     </ul>
   </div>
@@ -59,7 +62,7 @@ export default {
       flex-basis: 100%;
       padding: 24px 0 23.5px 24px;
       text-align: start;
-      font-family: "Inter";
+      font-family: "Inter-Light";
       font-style: normal;
       font-weight: 400;
       font-size: 12px;

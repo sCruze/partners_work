@@ -65,7 +65,7 @@ export default {
     margin: 32px 0 28px 0;
     p {
       position: static;
-      font-family: "Inter";
+      font-family: "Inter-Regular";
       font-style: normal;
       font-weight: 400;
       font-size: 26px;
@@ -78,7 +78,7 @@ export default {
       right: 0%;
       top: 0%;
       bottom: 0%;
-      font-family: "Inter";
+      font-family: "Inter-Regular";
       font-style: normal;
       font-weight: 400;
       font-size: 14px;

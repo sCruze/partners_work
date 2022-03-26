@@ -13,11 +13,12 @@ export default new Vuex.Store({
       ctx.commit("updatePartners", response);
     },
     async blockPartner(ctx, idPartner) {
-      await request(`partner/${idPartner}/block/`, "GET");
-      console.log(idPartner);
+      await request(`partner/${idPartner}/block`, "GET");
+      console.log("block", idPartner);
       ctx.dispatch("fetchPartners");
     },
     async unblockPartner(ctx, idPartner) {
+      console.log("id", idPartner);
       await request(`partner/${idPartner}/unblock`, "GET");
 
       ctx.dispatch("fetchPartners");
